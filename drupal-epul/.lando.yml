@@ -1,0 +1,8 @@
+name: epul
+recipe: drupal8
+config:
+  webroot: web
+services:
+  appserver:
+    run:
+      - composer install
