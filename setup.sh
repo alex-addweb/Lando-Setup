@@ -12,6 +12,7 @@ then
     # Check whether lando is installed or not
     if [ -f /usr/local/bin/lando ]
     then
+        # Lando Start & DB import
         echo -e "\n\033[0;32m ........Lando Start & DB import........\033[0m \n"
         lando start
         lando db-import $db_name
@@ -20,6 +21,7 @@ then
         sudo apt-get install curl -y
         /bin/bash -c "$(curl -sL $lando_url)"
 
+        # Lando Start & DB import
         echo -e "\n\033[0;32m ........Lando Start & DB import........\033[0m \n"
         lando start
         lando db-import $db_name
@@ -32,12 +34,11 @@ else
     then
         read -e -p "Enter the DB name with path: " db_name
         
-        if [ $db_backup == 'yes' ]
-            then
-                echo -e "\n\033[0;36m ........Exporting Database........\033[0m \n"
-                lando db-export
-        fi
+        # Exporting Database
+        echo -e "\n\033[0;36m ........Exporting Database........\033[0m \n"
+        lando db-export
 
+        # Lando Restarting & Importing Database
         echo -e "\n\033[0;33m ........Lando Restarting & Importing Database........\033[0m \n"
         lando restart
         lando db-import $db_name
@@ -46,12 +47,14 @@ else
     then
         read -e -p "Enter the DB name with path: " db_name
 
+        # Lando Restarting & Importing Database
         echo -e "\n\033[0;33m ........Lando Restarting & Importing Database........\033[0m \n"
         lando restart
         lando db-import $db_name
 
     elif [ $import_db == 'no' ] && [ $db_backup == 'yes' ];
     then
+        # Exporting Database
         echo -e "\n\033[0;36m ........Exporting Database........\033[0m \n"
         lando db-export
     else
