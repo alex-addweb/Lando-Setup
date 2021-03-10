@@ -1,7 +1,7 @@
 #!/bin/bash
 lando_url="https://raw.githubusercontent.com/harshH-addweb/shell-script/main/ubuntu/lando-setup.sh"
 
-read -e -p "Are you doing setup for the first time yes/[no]: " -i "no" first_setup
+read -e -p "Are you doing setup for the first time [yes]/no: " -i "yes" first_setup
 
 
 if [ $first_setup == 'yes' ]
@@ -27,8 +27,8 @@ then
         lando db-import $db_name
     fi
 else
-    read -e -p "Do you want to Backup Existing DB yes/[no]: " -i "no" db_backup
-    read -e -p "Do you want to Import Database [yes]/no: " -i "yes" import_db
+    read -e -p "Do you want to Backup Existing DB [yes]/no: " -i "yes" db_backup
+    read -e -p "Do you want to Import Database yes/[no]: " -i "no" import_db
 
     if [ $import_db == 'yes' ] && [ $db_backup == 'yes' ];
     then

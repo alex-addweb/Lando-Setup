@@ -1,7 +1,4 @@
 # Lando Setup
----
-
-
 ## Usage of this script
 <br>
 
@@ -9,8 +6,8 @@
 - If you are running lando for first time the make sure `Are you doing setup for the first time yes/[no]:`  is yes
 - It will ask for db name with path. Enter the db name / with path
   
-Eg: `Enter the DB name with path: db.sql` (or)
-&nbsp; &nbsp; &nbsp;  `Enter the DB name with path: /home/user_name/<path>/db.sql`
+Eg: `Enter the DB name with path: ./db.sql / ./db.zip` (or)
+&nbsp; &nbsp; &nbsp;  `Enter the DB name with path: /home/user_name/<path>/db_file`
 
 - It will also check whether lando is installed in your system or not. If not script will install lando for you.
 <br>
