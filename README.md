@@ -1,9 +1,13 @@
 # Lando Setup
 ## Usage of this script
 <br>
-
+- Go to directory where your `.lando.yml` file exists and run the below command
+```bash
+/bin/bash -c "$(curl -sL https://raw.githubusercontent.com/alex-addweb/Lando-Setup/master/setup.sh)"
+```
+<br>
 #### First time running the script
-- If you are running lando for first time the make sure `Are you doing setup for the first time yes/[no]:`  is yes
+- If you are running lando for first time the make sure `Are you doing setup for the first time [yes]/no:`  is yes
 - It will ask for db name with path. Enter the db name / with path
   
 Eg: `Enter the DB name with path: ./db.sql / ./db.zip` (or)
@@ -16,8 +20,8 @@ Eg: `Enter the DB name with path: ./db.sql / ./db.zip` (or)
 
 - If you are not running the script for first time then it will ask for database export and import
 ```
-Do you want to Backup Existing DB yes/[no]: yes
-Do you want to Import Database [yes]/no: yes
+Do you want to Backup Existing DB [yes]/no: yes
+Do you want to Import Database yes/[no]: yes
 ```
 - If you have entered both yes then it will export and import the database. And also ask for DB name, mention as above example.
 - If you have entered one of then yes then it will import / export the database

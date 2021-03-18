@@ -40,7 +40,7 @@ else
 
         # Lando Restarting & Importing Database
         echo -e "\n\033[0;33m ........Lando Restarting & Importing Database........\033[0m \n"
-        lando restart
+        lando rebuild -y
         lando db-import $db_name
 
     elif [ $import_db == 'yes' ] && [ $db_backup == 'no' ];
@@ -49,7 +49,7 @@ else
 
         # Lando Restarting & Importing Database
         echo -e "\n\033[0;33m ........Lando Restarting & Importing Database........\033[0m \n"
-        lando restart
+        lando rebuild -y
         lando db-import $db_name
 
     elif [ $import_db == 'no' ] && [ $db_backup == 'yes' ];
