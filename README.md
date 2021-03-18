@@ -1,11 +1,14 @@
 # Lando Setup
 ## Usage of this script
+
 <br>
+
 - Go to directory where your `.lando.yml` file exists and run the below command
 ```bash
 /bin/bash -c "$(curl -sL https://raw.githubusercontent.com/alex-addweb/Lando-Setup/master/setup.sh)"
 ```
 <br>
+
 #### First time running the script
 - If you are running lando for first time the make sure `Are you doing setup for the first time [yes]/no:`  is yes
 - It will ask for db name with path. Enter the db name / with path
