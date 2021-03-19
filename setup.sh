@@ -40,7 +40,7 @@ then
     then
         # Lando Start & DB import
         echo -e "\n${green} ........Lando Start & DB import........${reset} \n"
-        lando start
+        lando rebuild -y
         lando db-import $db_name
     else
         # Installing Lando
@@ -49,7 +49,7 @@ then
 
         # Lando Start & DB import
         echo -e "\n${green} ........Lando Start & DB import........${reset} \n"
-        lando start
+        lando rebuild -y
         lando db-import $db_name
     fi
 
