@@ -31,7 +31,7 @@ Do you want to Export Database yes/[no]: yes
 ##### At last it will show you the lando info in table format
 
 
-![Lando_Info](/images/lando_info.png)
+![Lando_Info](/images/lando_info_table.png)
 
 
 ### Basic Commands
