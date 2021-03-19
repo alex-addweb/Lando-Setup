@@ -7,18 +7,17 @@
 ```bash
 /bin/bash -c "$(curl -sL https://raw.githubusercontent.com/alex-addweb/Lando-Setup/master/setup.sh)"
 ```
+- Also copy the database file where your `.lando.yml` file exists 
 <br>
 
-- Also copy the database file where your `.lando.yml` file exists 
-
-#### First time running the setup
+### First time running the setup
 `Are you doing setup for the first time [yes]/no: yes`
 
 - It will ask for database file name. `Enter the Database file name: DATABASE_FILE_NAME`
 - It will also check whether lando is installed in your system or not. If not script will install lando for you.
 <br>
 
-#### Not first time running the setup
+### Not first time running the setup
 `Are you doing setup for the first time [yes]/no: no`
 - If you are not running the script for first time then it will ask for database export and import
 ```
